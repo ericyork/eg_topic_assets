@@ -1,2 +1,101 @@
-/* add css */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+}
+body {
+    background-image: url(../img/bubbles.svg);
+}
+h1 {font-size: 3.6rem;}
+h2 {font-size: 2.8rem;}
+h3 {font-size: 2.4rem;}
+h4 {font-size: 2rem;}
+h5 {font-size: 1.8rem;}
+h6 {font-size: 1.6rem;}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Luckiest Guy", serif;
+}
+
+img {
+    width:100%;
+    height:auto;
+}
+svg {
+    height: 100%;
+    width: 100%;
+    fill: currentColor;
+    pointer-events: none;
+}
+
+/*--
+Document Styles --*/
+nav, footer {
+    background-color: #222;
+    color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+footer {
+    margin-top: 50vh;
+}
+nav div {
+    display: flex;
+}
+.logo {
+    align-items: center;
+    gap: 2rem;
+}
+.logo h1 {
+    padding-top: 10px;
+}
+.links {
+    gap: 4rem;
+}
+nav img {
+    height: 6rem;
+    width: auto;
+}
+main {
+    max-width: 78vw;
+    padding: 2rem;
+    margin: auto;
+    background: rgba(255,255,255, 0.92);
+}
+section {
+    display: grid;
+    margin: 3rem auto;
+    grid-gap: 3rem;
+}
+section.odd {
+    grid-template-columns: 8fr 4fr;
+}
+section.even {
+    grid-template-columns: 4fr 8fr;
+}
+div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*-- Media Queries --*/
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    section.even, section.odd {
+        grid-template-columns: 1fr;
+    }
+    section.odd div.poster {
+        order: 3;
+    }
+}
